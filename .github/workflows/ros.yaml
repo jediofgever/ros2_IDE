@@ -13,14 +13,17 @@ jobs:
       - uses: actions/checkout@v2
       - name: "Get workspace"
         run: |
-          if [ -f src/ros2.repos ]; then
-            vcs import --skip-existing < src/ros2.repos src
+          if [ -f ros2.repos ]; then
+            vcs import --skip-existing < ros2.repos src
           fi
       - name: "Get dependencies"
         run: |
           sudo apt-get update
           rosdep update
           rosdep install --from-paths src --ignore-src -y --rosdistro=foxy
+          sudo apt-get install ros-foxy-dynamixel-sdk
+
+
       - name: "Build"
         run: |
           colcon build --cmake-args '-DCMAKE_BUILD_TYPE=RelWithDebInfo' -Wall -Wextra -Wpedantic
@@ -40,8 +43,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: "Get workspace"
         run: |
-          if [ -f src/ros2.repos ]; then
-            vcs import --skip-existing < src/ros2.repos src
+          if [ -f ros2.repos ]; then
+            vcs import --skip-existing < ros2.repos src
           fi
       - name: "run linter"
         run: |
