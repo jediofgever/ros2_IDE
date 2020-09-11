@@ -7,4 +7,4 @@ repositories:
   ROS_CB:
     type: git
     url: https://github.com/jediofgever/ROS_CB.git
-    version: foxy
+    version: master
