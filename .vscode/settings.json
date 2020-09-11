@@ -1,0 +1,41 @@
+{
+    "C_Cpp.default.intelliSenseMode": "clang-x64",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "editor.tabSize": 8,
+    "files.associations": {
+        "*.repos": "yaml",
+        "*.world": "xml",
+        "*.xacro": "xml"
+    },
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/foxy/lib/python3.8/site-packages/"
+    ],
+    "editor.rulers": [
+        100
+    ],
+    "editor.defaultFormatter": "LaurentTreguier.uncrustify",
+    "uncrustify.configPath.linux": "/opt/ros/foxy/lib/python3.8/site-packages/ament_uncrustify/configuration/ament_code_style.cfg",
+    "cSpell.words": [
+        "autopep",
+        "cmake",
+        "cppcheck",
+        "cpplint",
+        "pytest",
+        "rclcpp",
+        "rclpy",
+        "repos",
+        "uncrustify",
+        "xmllint"
+    ],
+    "python.formatting.autopep8Args": [
+        "--max-line-length=100"
+    ],
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/build": true,
+        "**/install": true,
+        "**/log": true
+    }
+}
